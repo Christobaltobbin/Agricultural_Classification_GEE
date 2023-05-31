@@ -1,0 +1,402 @@
+/**** Start of imports. If edited, may not auto-convert in the playground. ****/
+var aoi_1 = 
+    /* color: #98ff00 */
+    /* shown: false */
+    /* displayProperties: [
+      {
+        "type": "rectangle"
+      },
+      {
+        "type": "rectangle"
+      },
+      {
+        "type": "rectangle"
+      },
+      {
+        "type": "rectangle"
+      }
+    ] */
+    ee.Geometry.MultiPolygon(
+        [[[[34.31647532509048, -1.166059593913607],
+           [34.31647532509048, -1.40014683847605],
+           [34.53139536903579, -1.40014683847605],
+           [34.53139536903579, -1.166059593913607]]],
+         [[[33.91140537183407, -1.6165036905731927],
+           [33.91140537183407, -1.8992682143439947],
+           [34.063840674568446, -1.8992682143439947],
+           [34.063840674568446, -1.6165036905731927]]],
+         [[[33.85533778445074, -1.958337957377614],
+           [33.85533778445074, -2.043430079199476],
+           [33.933615372341364, -2.043430079199476],
+           [33.933615372341364, -1.958337957377614]]],
+         [[[33.789086091695786, -1.4905634628164894],
+           [33.789086091695786, -1.5561149297733645],
+           [33.88435815590477, -1.5561149297733645],
+           [33.88435815590477, -1.4905634628164894]]]], null, false),
+    image = ee.Image("projects/ee-tanzania/assets/20221028_074324_09_2482_3B_AnalyticMS_SR_8b_harmonized_clip"),
+    image2 = ee.Image("projects/ee-tanzania/assets/20221028_074326_43_2482_3B_AnalyticMS_SR_8b_harmonized_clip"),
+    image3 = ee.Image("projects/ee-tanzania/assets/20221203_070919_00_241f_3B_AnalyticMS_SR_8b_harmonized_clip"),
+    image4 = ee.Image("projects/ee-tanzania/assets/20221203_070921_33_241f_3B_AnalyticMS_SR_8b_harmonized_clip"),
+    image5 = ee.Image("projects/ee-tanzania/assets/20221203_070923_65_241f_3B_AnalyticMS_SR_8b_harmonized_clip"),
+    image6 = ee.Image("projects/ee-tanzania/assets/20230214_074635_94_2482_3B_AnalyticMS_SR_8b_harmonized_clip"),
+    image7 = ee.Image("projects/ee-tanzania/assets/20230308_071346_17_24c9_3B_AnalyticMS_SR_8b_harmonized_clip"),
+    aoi_2 = 
+    /* color: #d63000 */
+    /* shown: false */
+    /* displayProperties: [
+      {
+        "type": "rectangle"
+      }
+    ] */
+    ee.Geometry.Polygon(
+        [[[33.97759635350179, -1.8435541253509342],
+          [33.97759635350179, -1.8542773757424253],
+          [33.98755271336507, -1.8542773757424253],
+          [33.98755271336507, -1.8435541253509342]]], null, false),
+    image8 = ee.Image("projects/ee-tanzania/assets/S1_MeanVH_ASCENDING_tif"),
+    image9 = ee.Image("projects/ee-tanzania/assets/S1_MeanVV_ASCENDING_tif"),
+    aoi_3 = 
+    /* color: #d63000 */
+    /* shown: false */
+    /* displayProperties: [
+      {
+        "type": "rectangle"
+      }
+    ] */
+    ee.Geometry.Polygon(
+        [[[33.76891909659827, -1.1359902398871173],
+          [33.76891909659827, -2.052983632303877],
+          [34.56268130362952, -2.052983632303877],
+          [34.56268130362952, -1.1359902398871173]]], null, false),
+    polygon1 = 
+    /* color: #d63000 */
+    /* shown: false */
+    /* displayProperties: [
+      {
+        "type": "rectangle"
+      }
+    ] */
+    ee.Geometry.Polygon(
+        [[[33.78966468225449, -1.4909991229949782],
+          [33.78966468225449, -1.5553493901137443],
+          [33.88407843957871, -1.5553493901137443],
+          [33.88407843957871, -1.4909991229949782]]], null, false),
+    polygon2 = 
+    /* color: #98ff00 */
+    /* shown: false */
+    /* displayProperties: [
+      {
+        "type": "rectangle"
+      }
+    ] */
+    ee.Geometry.Polygon(
+        [[[33.855427515737695, -1.9586208507117837],
+          [33.855427515737695, -2.0423405397895333],
+          [33.93301845812051, -2.0423405397895333],
+          [33.93301845812051, -1.9586208507117837]]], null, false),
+    polygon3 = 
+    /* color: #0b4a8b */
+    /* shown: false */
+    /* displayProperties: [
+      {
+        "type": "rectangle"
+      }
+    ] */
+    ee.Geometry.Polygon(
+        [[[33.912088840535866, -1.6173522281620656],
+          [33.912088840535866, -1.8987440869345509],
+          [34.06323668294309, -1.8987440869345509],
+          [34.06323668294309, -1.6173522281620656]]], null, false),
+    polygon4 = 
+    /* color: #ffc82d */
+    /* shown: false */
+    /* displayProperties: [
+      {
+        "type": "rectangle"
+      }
+    ] */
+    ee.Geometry.Polygon(
+        [[[34.31741049574839, -1.1671050986353557],
+          [34.31741049574839, -1.398446485129626],
+          [34.52958395766245, -1.398446485129626],
+          [34.52958395766245, -1.1671050986353557]]], null, false),
+    roi1 = 
+    /* color: #d6872c */
+    /* shown: false */
+    /* displayProperties: [
+      {
+        "type": "rectangle"
+      }
+    ] */
+    ee.Geometry.Polygon(
+        [[[33.77864041589062, -1.151467717996725],
+          [33.77864041589062, -1.5578473955262897],
+          [34.205733921749996, -1.5578473955262897],
+          [34.205733921749996, -1.151467717996725]]], null, false),
+    roi2 = 
+    /* color: #98ff00 */
+    /* shown: false */
+    /* displayProperties: [
+      {
+        "type": "rectangle"
+      }
+    ] */
+    ee.Geometry.Polygon(
+        [[[33.779250997062604, -1.1547116538410342],
+          [33.779250997062604, -1.5665819047474383],
+          [34.161025899406354, -1.5665819047474383],
+          [34.161025899406354, -1.1547116538410342]]], null, false);
+/***** End of imports. If edited, may not auto-convert in the playground. *****/
+//Tanzania Classification..//
+
+// // Load the Area of Interest
+// var my_aoi = ee.FeatureCollection(aoi);
+// Map.centerObject(my_aoi, 9);
+// Map.addLayer(my_aoi,{},'aoi');
+
+// Load the training data
+var training_data = ee.FeatureCollection('projects/ee-tanzania/assets/training_tanzania_2');
+print('Taining Data', training_data);
+Map.centerObject(training_data, 8);
+Map.addLayer(training_data,{},'Taining Data', true);
+
+// // Load the study areas and merge
+// var polygon1 = ee.FeatureCollection('projects/ee-tanzania/assets/polygon1');
+// var polygon2 = ee.FeatureCollection('projects/ee-tanzania/assets/polygon2');
+// var polygon3 = ee.FeatureCollection('projects/ee-tanzania/assets/polygon3');
+// var polygon4 = ee.FeatureCollection('projects/ee-tanzania/assets/polygon4');
+
+// var merged_polygons = polygon1.merge(polygon2).merge(polygon3).merge(polygon4);
+// Map.addLayer(merged_polygons,{},'Study Areas', false);
+
+// Area of interest
+var my_aoi = ee.FeatureCollection(aoi_1);//.merge(ee.FeatureCollection('projects/ee-tanzania/assets/polygon2'));
+Map.addLayer(my_aoi,{},'aoi', true);
+
+//Rename Bands for Sentinel 2
+var renameBands_sent2 = function(image){
+  var bands = ['B2','B3','B4','B8','B11','B12','QA60'];
+  var newBands = ['B','G','R','NIR','SWIR1','SWIR2','QA60'];
+  return image.select(bands).rename(newBands);
+};
+
+//Rename Bands for PlanetScope
+var renameBands_planet = function(image){
+  var bands = ['b1','b2','b3','b4','b5','b6','b7','b8'];
+  var newBands = ['R','G','B','G1','Y','R1','RE','NIR'];
+  return image.select(bands).rename(newBands);
+};
+
+//CloudMask for Sentinel 2
+var cloudMask_sent2 = function(image){
+  var qa = image.select('QA60');
+  var cloudShadowBitValue = 1 << 10;
+  var cloudBitValue = 1 << 11;
+  var shadowmask = qa.bitwiseAnd(cloudShadowBitValue).eq(0);
+  var cloudmask = qa.bitwiseAnd(cloudBitValue).eq(0);
+  var finalmask = shadowmask.and(cloudmask);
+  return image.updateMask(finalmask);
+};
+
+// Load Sentinel 2 images
+var sent2 = ee.ImageCollection("COPERNICUS/S2")
+                .filterBounds(aoi_1)
+                .filterDate('2022-10-01','2023-03-31')
+                .filter(ee.Filter.lt('CLOUDY_PIXEL_PERCENTAGE',0.5))
+                .map(cloudMask_sent2)
+                .map(renameBands_sent2)
+                .map(function(image){return image.clip(my_aoi)});
+
+print("Sentinel 2 image collection", sent2);
+Map.addLayer(sent2, {bands: ['R', 'G', 'B'], min:1000, max:3500}, 'Sentinel 2 Image Collection');
+
+
+// Load Planet Image collection
+var planet = ee.ImageCollection([image,image2,image3,image4,image5,image6,image7])
+                .map(renameBands_planet)
+                .map(function(image){return image.clip(my_aoi)});
+print('Planet Img Col', planet);
+Map.addLayer(planet, {bands: ['R','G','B'], min:185, max:1404}, 'Planet Image Collection');
+
+// Load Sentinel 1 Image collection
+var sent1_VH_mean = ee.Image('projects/ee-tanzania/assets/S1_MeanVH_ASCENDING')
+                .clip(my_aoi);
+print('Sentinel 1 VH', sent1_VH_mean);
+Map.addLayer(sent1_VH_mean, {min:-30, max: 0}, 'Sentinel 1 VH_mean');
+
+
+var sent1_VV_mean = ee.Image('projects/ee-tanzania/assets/S1_MeanVV_ASCENDING')
+                .clip(my_aoi);
+print('Sentinel 1 VV', sent1_VV_mean);
+Map.addLayer(sent1_VV_mean, {min: -25, max: 5}, 'Sentinel 1 VV_mean');
+
+
+// Get information about Planet Projection
+var planetProjection = planet.first().projection();
+print('planetProjection', planetProjection);
+
+// Resample Sentinel Images to PlanetScope Resolution
+var sent2_resampled = sent2.map(function(image) {
+  return image.reduceResolution({reducer: ee.Reducer.mean()})
+              .reproject({crs: planetProjection});
+});
+
+print('Sentinel 2 resmpled', sent2_resampled);
+
+var sent1_resampled_VH = sent1_VH_mean.reduceResolution({reducer: ee.Reducer.mean()})
+              .reproject({crs: planetProjection});
+
+
+print('Sentinel 1 VH resmpled', sent1_resampled_VH);
+
+var sent1_resampled_VV = sent1_VH_mean.reduceResolution({reducer: ee.Reducer.mean()})
+              .reproject({crs: planetProjection});
+
+print('Sentinel 1 VV resmpled', sent1_resampled_VV);
+
+
+// NDVI and NDWI functions for Sentinel
+var sent_ndvi = function(image){
+  var ndvi = image.normalizedDifference(['NIR','R']);
+  return image.addBands(ndvi.rename('sent_NDVI')).float();
+};
+
+var sent_ndwi = function(image){
+  var ndwi = image.normalizedDifference(['G','NIR']);
+  return image.addBands(ndwi.rename('sent_NDWI')).float();
+};
+
+var rvi = sent1_VH_mean.multiply(4).divide(sent1_VV_mean.add(sent1_VH_mean));
+print('Radar Vegetation Index', rvi);
+
+// NDVI and NDWI functions for planet
+var planet_ndvi = function(image){
+  var ndvi = image.normalizedDifference(['NIR','R']);
+  return image.addBands(ndvi.rename('planet_NDVI')).float();
+};
+
+var planet_ndwi = function(image){
+  var ndwi = image.normalizedDifference(['G','NIR']);
+  return image.addBands(ndwi.rename('planet_NDWI')).float();
+};
+
+// Add indices to image collections
+var sent2_resampled_indices = sent2_resampled.map(sent_ndvi).map(sent_ndwi);
+print('sent2_resampled_indices', sent2_resampled_indices);
+
+var planet_indices = planet.map(planet_ndvi).map(planet_ndwi);
+print('planet_indices', planet_indices);
+
+// Get the Maximum NDVI composite image
+var sent2_resampled_indices_composite = sent2_resampled_indices.qualityMosaic('sent_NDVI');
+print('Max NDVI Sentinel Composite', sent2_resampled_indices_composite);
+
+var planet_indices_composite = planet_indices.qualityMosaic('planet_NDVI');
+print('Max NDVI Planet Composite', planet_indices_composite);
+
+var sent1_indices_composite = rvi.reduce(ee.Reducer.max());
+print('Max RVI Composite', sent1_indices_composite);
+
+// Merge both Planet and Sentinel Images
+
+var merged_image = sent2_resampled_indices_composite.select('sent_NDVI').addBands(planet_indices_composite
+                                                    .select('planet_NDVI')).addBands(sent1_indices_composite);
+print('Merged Sentinel and Planet Image', merged_image);
+// The total accuracy is 0.7 without the planet_composite while 0.6 with it, same goes for the keppa
+// adding the sentinel bands would also increase the accurcy of the classification
+
+// Resample merged Images to PlanetScope Resolution
+var merged_image_resampled = merged_image.reproject({crs: planetProjection});
+
+print('merged_image_resampled', merged_image_resampled);
+
+// var bands = ['B','G','R','NIR','SWIR1','SWIR2','QA60','sent_NDVI','sent_NDWI',
+//             'R_1','G_1','B_1','G1','Y','R1','RE','NIR_1','planet_NDVI','planet_NDWI','max'];
+
+var bands = ['sent_NDVI','planet_NDVI','max'];
+
+
+var sampled_training_data = merged_image_resampled.select(bands).sampleRegions({
+  // Define the training FeatureCollection
+  collection: training_data,
+  // Define the attribute column to look at.
+  properties: ['Class ID'],
+  // Set the scale to get pixels in the polygons.
+  scale: 3
+});
+
+// print('sampled_training_data',sampled_training_data.first());
+
+// Splitting training samples for training data and validation data
+var random_column = sampled_training_data.randomColumn(); //splits the data
+var training_samples = random_column.filter(ee.Filter.gte('random', 0.7)); //70% trainig data
+var validation_samples = random_column.filter(ee.Filter.lte('random', 0.3)); //30%validation data
+
+// define classifier to use
+var classifier = ee.Classifier.smileRandomForest(70);
+// a tree number of 100 and above give an error
+
+// train classifier with training data
+var trained_classifier = classifier.train({
+  features: training_samples,
+  classProperty: 'Class ID',
+  inputProperties: bands
+});
+
+var trainAccuracy = ee.FeatureCollection(trained_classifier.confusionMatrix());
+print('Confusion Matrix',trainAccuracy);
+
+// classify merged Sentinel and Planet image
+var classified_merged = merged_image_resampled.select(bands).classify(trained_classifier);
+print('Classified Image', classified_merged);
+var classified_merged_clipped = classified_merged.clip(aoi_2);
+
+// define color palette 
+var class_num = 23, //number of classes;
+seed = 1234;
+var palette = [
+  '1f77b4', 'ff7f0e', '2ca02c', 'd62728', '9467bd',
+  '8c564b', 'e377c2', '7f7f7f', 'bcbd22', '17becf',
+  'aec7e8', 'ffbb78', '98df8a', 'ff9896', 'c5b0d5',
+  'c49c94', 'f7b6d2', 'c7c7c7', 'dbdb8d', '9edae5',
+  '393b79', '637939','#ff9896'
+];
+Map.addLayer(classified_merged_clipped, {palette: palette, min: 1, max: class_num}, 'Classified Image');
+
+// Accuracy assessment 
+var classified_validated = validation_samples.classify(trained_classifier);
+var error_matrix = classified_validated.errorMatrix({
+  actual: 'Class ID',
+  predicted: 'classification'
+});
+print('Validation error matrix', error_matrix);
+
+var total_accuracy = error_matrix.accuracy();
+print('Total Accuracy', total_accuracy);
+
+var user_accuracy = error_matrix.consumersAccuracy();
+print('User Accuracy', user_accuracy);
+
+var producer_accuracy = error_matrix.producersAccuracy();
+print('Producer Accuracy', producer_accuracy);
+
+var kappa = error_matrix.kappa();
+print('Kappa', kappa);
+
+// Export classified Images to Drive
+// Export.table.toDrive({
+//   collection: ee.FeatureCollection(trainAccuracy),
+//   description: 'confusionMatrix',
+//   fileFormat: 'CSV'
+// });
+
+// Export.image.toDrive({
+//   image: classified_merged,
+//   description: 'classified_merged_area1',
+//   crs: 'EPSG:32736',
+//   region: roi1,
+//   scale:3,
+//   maxPixels: 1e13,
+//   folder: 'Tanzania_classified_shape'
+// });
+
